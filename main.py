@@ -15,7 +15,7 @@ from flask import Flask, request, jsonify
 model = keras.models.load_model("model.h5")
 
 # Load grading data
-df_grading = pd.read_csv('Data Minuman.csv')
+df_grading = pd.read_csv('./Dataset/Data Minuman.csv')
 
 # Load labels from JSON
 with open('class_indices.json', 'r') as f:
@@ -65,4 +65,4 @@ def index():
     return "OK we did it yoi"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

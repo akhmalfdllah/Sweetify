@@ -15,7 +15,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 model = keras.models.load_model('./model.h5')
 
 # Load grading data
-df_grading = pd.read_csv('./Data Minuman.csv')
+df_grading = pd.read_csv('./Dataset/Data Minuman.csv')
 
 # Load labels from JSON
 with open('./class_indices.json', 'r') as f:
@@ -33,7 +33,7 @@ def get_nutrifacts(drink_name):
     return drink
 
 # Load the image
-with open('sample.JPG', 'rb') as file:
+with open('.sample.JPG', 'rb') as file:
     image_bytes = file.read()
 
 # Preprocess the image
