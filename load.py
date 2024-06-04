@@ -33,7 +33,7 @@ def get_nutrifacts(drink_name):
     return drink
 
 # Load the image
-with open('.sample.JPG', 'rb') as file:
+with open('sample.JPG', 'rb') as file:
     image_bytes = file.read()
 
 # Preprocess the image
